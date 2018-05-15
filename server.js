@@ -14,7 +14,7 @@ server.get('/api/posts', (req, res) => {
             res.status(200).json({ posts })
         })
         .catch(err => {
-            res.status(500).json({ error: 'Problem retreiving data' })
+            res.status(500).json({ error: "The posts information could not be retrieved." })
         })
 })
 
@@ -26,6 +26,6 @@ server.get('/api/posts/:id', (req, res) => {
             res.json({ post })
         })
         .catch(err => {
-            res.status(500).json({ error: 'Problem retreiving data' })
+            res.status(500).json({ message: "The post with the specified ID does not exist." })
         })
 })
